@@ -8,7 +8,7 @@ const Header = () => (
       <Link to="/">
         <img src="/lifefocus/tree.png" alt="Tree Icon" className="logo" />
       </Link>
-      <Link to="/lifefocus" className="title">Life Focus</Link>
+      <Link to="/" className="title">Life Focus</Link>
     </div>
     <nav className="nav">
     </nav>

@@ -59,7 +59,7 @@ const KeyLifeDomains2 = () => {
         </Droppable>
       </DragDropContext>
 
-      <button onClick={handleButtonClick} className="done-button">I'm done!</button>
+      <button onClick={handleButtonClick} className="done-button">Rank them!</button>
 
       {showTable && (
         <>
