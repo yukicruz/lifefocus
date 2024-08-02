@@ -111,7 +111,7 @@ const IndexPage = () => {
   const images = [
     // { fluid: data.image1.childImageSharp.fluid, text: "Text over image 1", link: "/page1" },
     { fluid: data.image2.childImageSharp.fluid, text: "Your Core Values", link: "/core-values" },
-    { fluid: data.image3.childImageSharp.fluid, text: "Key Life Domains 1", link: "/key-life-domains" },
+    { fluid: data.image3.childImageSharp.fluid, text: "Rate Key Life Domains", link: "/key-life-domains" },
     { fluid: data.image4.childImageSharp.fluid, text: "Life Satisfaction Survey", link: "/life-satisfaction-survey" },
     { fluid: data.image5.childImageSharp.fluid, text: "Rank Life Domains by Stress", link: "/key-life-domains-2" },
     { fluid: data.image6.childImageSharp.fluid, text: "Rank Life Domains by Importance", link: "/key-life-domains-3" },
