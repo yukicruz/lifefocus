@@ -135,7 +135,7 @@ const IndexPage = () => {
     <div>
       <Header /> {/* Use the Header component */}
       <div className="main-text">
-        <h1>Rediscover your core values,<br />Redefine your life</h1>
+        <h2>Rediscover your core values,<br />Redefine your life</h2>
 
       </div>
 
