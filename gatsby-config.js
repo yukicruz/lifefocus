@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "https://yukicruz.github.io/lifefocus/", // replace with your repository name
+  pathPrefix: "/lifefocus", // replace with your repository name
   siteMetadata: {
     title: `Life Focus`,
     description: `Rediscover your core values, Redefine your life`,
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Overcome Midlife`,
-        short_name: `OvercomeMidlife`,
+        name: `Life Focus`,
+        short_name: `LifeFocus`,
         start_url: `/`,
         background_color: `#663399`,
         // This will impact how browsers show your PWA/website

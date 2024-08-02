@@ -28,7 +28,7 @@ const IndexPage = () => {
           }
         }
       }
-      image4: file(relativePath: { eq: "image4.jpeg" }) {
+      image4: file(relativePath: { eq: "image8.jpeg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -109,20 +109,20 @@ const IndexPage = () => {
   `)
 
   const images = [
-    { fluid: data.image1.childImageSharp.fluid, text: "Text over image 1", link: "/page1" },
-    { fluid: data.image2.childImageSharp.fluid, text: "Day 2: Your Core Values", link: "/core-values" },
-    { fluid: data.image3.childImageSharp.fluid, text: "Day 3: Key Life Domains 1", link: "/key-life-domains" },
-    { fluid: data.image4.childImageSharp.fluid, text: "Day 4: Life Satisfaction Survey", link: "/life-satisfaction-survey" },
-    { fluid: data.image5.childImageSharp.fluid, text: "Day 5: Rank Life Domains by Stress", link: "/key-life-domains-2" },
-    { fluid: data.image6.childImageSharp.fluid, text: "Day 6: Rank Life Domains by Importance", link: "/key-life-domains-3" },
-    { fluid: data.image7.childImageSharp.fluid, text: "Text over image 7", link: "/page7" },
-    { fluid: data.image8.childImageSharp.fluid, text: "Text over image 8", link: "/page8" },
-    { fluid: data.image9.childImageSharp.fluid, text: "Text over image 9", link: "/page9" },
-    { fluid: data.image10.childImageSharp.fluid, text: "Text over image 10", link: "/page10" },
-    { fluid: data.image11.childImageSharp.fluid, text: "Text over image 11", link: "/page11" },
-    { fluid: data.image12.childImageSharp.fluid, text: "Text over image 12", link: "/page12" },
-    { fluid: data.image13.childImageSharp.fluid, text: "Text over image 13", link: "/page13" },
-    { fluid: data.image14.childImageSharp.fluid, text: "Text over image 14", link: "/page14" },
+    // { fluid: data.image1.childImageSharp.fluid, text: "Text over image 1", link: "/page1" },
+    { fluid: data.image2.childImageSharp.fluid, text: "Your Core Values", link: "/core-values" },
+    { fluid: data.image3.childImageSharp.fluid, text: "Key Life Domains 1", link: "/key-life-domains" },
+    { fluid: data.image4.childImageSharp.fluid, text: "Life Satisfaction Survey", link: "/life-satisfaction-survey" },
+    { fluid: data.image5.childImageSharp.fluid, text: "Rank Life Domains by Stress", link: "/key-life-domains-2" },
+    { fluid: data.image6.childImageSharp.fluid, text: "Rank Life Domains by Importance", link: "/key-life-domains-3" },
+    // { fluid: data.image7.childImageSharp.fluid, text: "Text over image 7", link: "/page7" },
+    // { fluid: data.image8.childImageSharp.fluid, text: "Text over image 8", link: "/page8" },
+    // { fluid: data.image9.childImageSharp.fluid, text: "Text over image 9", link: "/page9" },
+    // { fluid: data.image10.childImageSharp.fluid, text: "Text over image 10", link: "/page10" },
+    // { fluid: data.image11.childImageSharp.fluid, text: "Text over image 11", link: "/page11" },
+    // { fluid: data.image12.childImageSharp.fluid, text: "Text over image 12", link: "/page12" },
+    // { fluid: data.image13.childImageSharp.fluid, text: "Text over image 13", link: "/page13" },
+    // { fluid: data.image14.childImageSharp.fluid, text: "Text over image 14", link: "/page14" },
   ]
 
   return (
