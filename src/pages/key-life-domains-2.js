@@ -33,7 +33,7 @@ const KeyLifeDomains2 = () => {
   return (
     <Layout>
       <h1>Key Life Domains 2: Rank by Stress</h1>
-      <p>These are the 7 life domains. Organize them by placing the ones giving you the most stress at top and the least stressful domains at the bottom.</p>
+      <p>These are the 7 life domains. Drag your most stressful ones to the top and your least stressful to the bottom.</p>
 
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="domains">
