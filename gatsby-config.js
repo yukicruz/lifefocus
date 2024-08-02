@@ -1,9 +1,10 @@
 module.exports = {
+  pathPrefix: "/lifefocus", // replace with your repository name
   siteMetadata: {
-    title: `Overcome Midlife`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Life Focus`,
+    description: `Rediscover your core values, Redefine your life`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    // siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
