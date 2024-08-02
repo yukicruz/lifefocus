@@ -1,128 +1,153 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
+import Header from "../components/header" // Import Header component
+import "../styles/global.css"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      image1: file(relativePath: { eq: "image1.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image2: file(relativePath: { eq: "image2.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image3: file(relativePath: { eq: "image3.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image4: file(relativePath: { eq: "image4.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image5: file(relativePath: { eq: "image5.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image6: file(relativePath: { eq: "image6.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image7: file(relativePath: { eq: "image7.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image8: file(relativePath: { eq: "image8.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image9: file(relativePath: { eq: "image9.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image10: file(relativePath: { eq: "image10.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image11: file(relativePath: { eq: "image11.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image12: file(relativePath: { eq: "image12.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image13: file(relativePath: { eq: "image13.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      image14: file(relativePath: { eq: "image14.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+  const images = [
+    { fluid: data.image1.childImageSharp.fluid, text: "Text over image 1", link: "/page1" },
+    { fluid: data.image2.childImageSharp.fluid, text: "Day 2: Your Core Values", link: "/core-values" },
+    { fluid: data.image3.childImageSharp.fluid, text: "Day 3: Key Life Domains 1", link: "/key-life-domains" },
+    { fluid: data.image4.childImageSharp.fluid, text: "Day 4: Life Satisfaction Survey", link: "/life-satisfaction-survey" },
+    { fluid: data.image5.childImageSharp.fluid, text: "Day 5: Rank Life Domains by Stress", link: "/key-life-domains-2" },
+    { fluid: data.image6.childImageSharp.fluid, text: "Day 6: Rank Life Domains by Importance", link: "/key-life-domains-3" },
+    { fluid: data.image7.childImageSharp.fluid, text: "Text over image 7", link: "/page7" },
+    { fluid: data.image8.childImageSharp.fluid, text: "Text over image 8", link: "/page8" },
+    { fluid: data.image9.childImageSharp.fluid, text: "Text over image 9", link: "/page9" },
+    { fluid: data.image10.childImageSharp.fluid, text: "Text over image 10", link: "/page10" },
+    { fluid: data.image11.childImageSharp.fluid, text: "Text over image 11", link: "/page11" },
+    { fluid: data.image12.childImageSharp.fluid, text: "Text over image 12", link: "/page12" },
+    { fluid: data.image13.childImageSharp.fluid, text: "Text over image 13", link: "/page13" },
+    { fluid: data.image14.childImageSharp.fluid, text: "Text over image 14", link: "/page14" },
+  ]
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
+  return (
+    <div>
+      <Header /> {/* Use the Header component */}
+      <div className="main-text">
+        <h1>Rediscover your core values,<br />Redefine your life</h1>
+        <a href="/assessment" className="assessment-button">Take Our Free Assessment Test</a>
+      </div>
+      <div className="image-grid">
+        {images.map((image, index) => (
+          <a href={image.link} key={index} className="image-card">
+            <Img fluid={image.fluid} alt={`Image ${index + 1}`} />
+            <span className="image-text">{image.text}</span>
           </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
+        ))}
+      </div>
+      <div className="video-container">
+        <video autoPlay loop muted className="background-video">
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  )
+}
 
 export default IndexPage

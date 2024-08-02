@@ -1,0 +1,119 @@
+.step {
+  margin-bottom: 10px;
+  padding: 1px 10px 10px 10px;
+  border: 1px solid #ddd;
+}
+
+.step.active {
+  border: 3px solid #a8d5ba; /* A more accessible green shade */
+}
+
+.step-header {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.step-content {
+  display: none;
+  padding: 10px;
+}
+
+.step.active .step-content {
+  display: block;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.value-cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  white-space: nowrap; /* Prevents text from wrapping to a second line */
+}
+
+.value-cell.selected {
+  background-color: #a8d5ba;
+}
+
+.value-cell::placeholder {
+  color: #aaa;
+}
+
+.submit-button,
+.proceed-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover,
+.proceed-button:hover {
+  background-color: #45a049;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.container {
+  min-height: 150px; /* Decreased height by 50% */
+  border: 2px dashed #ddd;
+  background-color: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .value-cell {
+  margin: 5px;
+}
+
+.group-section {
+  margin-top: 20px;
+}
+
+.group-section h3 {
+  margin-bottom: 10px;
+}
+
+.group-section textarea {
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.ranking-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.ranking-block {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.block-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
