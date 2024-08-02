@@ -62,35 +62,33 @@ const KeyLifeDomains2 = () => {
       <button onClick={handleButtonClick} className="done-button">I'm done!</button>
 
       {showTable && (
-        <div>
-          <table className="results-table">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Life Domain</th>
+        <table className="results-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Life Domain</th>
+            </tr>
+          </thead>
+          <tbody>
+            {domains.map((domain, index) => (
+              <tr key={domain.id}>
+                <td>{index + 1}</td>
+                <td>{domain.content}</td>
               </tr>
-            </thead>
-            <tbody>
-              {domains.map((domain, index) => (
-                <tr key={domain.id}>
-                  <td>{index + 1}</td>
-                  <td>{domain.content}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSemSuvy4c-sKXRU6zLZFdk9pwbd2UgOFjrVu-PXlZHVuRr18g/viewform?embedded=true"
-            width="640"
-            height="720"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-            title="Google Form"
-          >
-            Loading…
-          </iframe>
-        </div>
+            ))}
+          </tbody>
+        </table>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSemSuvy4c-sKXRU6zLZFdk9pwbd2UgOFjrVu-PXlZHVuRr18g/viewform?embedded=true"
+          width="640"
+          height="720"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          title="Google Form"
+        >
+          Loading…
+        </iframe>
       )}
     </Layout>
   );
