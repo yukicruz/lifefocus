@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import '../lifefocus/styles/keyLifeDomains2.css';  // Ensure the path is correct
+import 'lifefocus/styles/keyLifeDomains2.css';  // Ensure the path is correct
 
 const KeyLifeDomains2 = () => {
   const [domains, setDomains] = useState([
