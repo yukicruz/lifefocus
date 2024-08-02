@@ -30,7 +30,6 @@ const KeyLifeDomains2 = () => {
     setShowTable(true);
   };
 
-
   return (
     <Layout>
       <h1>Key Life Domains 2: Rank by Stress</h1>
@@ -80,17 +79,34 @@ const KeyLifeDomains2 = () => {
               ))}
             </tbody>
           </table>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSemSuvy4c-sKXRU6zLZFdk9pwbd2UgOFjrVu-PXlZHVuRr18g/viewform?embedded=true"
-            width="640"
-            height="720"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-            title="Google Form"
-          >
-            Loading…
-          </iframe>
+          <div className="responsive-iframe-container">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSemSuvy4c-sKXRU6zLZFdk9pwbd2UgOFjrVu-PXlZHVuRr18g/viewform?embedded=true"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+              title="Google Form"
+              className="responsive-iframe"
+            >
+              Loading…
+            </iframe>
+          </div>
+          <style jsx>{`
+            .responsive-iframe-container {
+              position: relative;
+              width: 100%;
+              overflow: hidden;
+              padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            }
+            .responsive-iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border: 0;
+            }
+          `}</style>
         </>
       )}
     </Layout>
