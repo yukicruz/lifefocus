@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "${__dirname}", // replace with your repository name
+  pathPrefix: '/lifefocus', // replace with your repository name
   siteMetadata: {
     title: `Life Focus`,
     description: `Rediscover your core values, Redefine your life`,
