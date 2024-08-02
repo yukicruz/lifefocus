@@ -30,6 +30,7 @@ const KeyLifeDomains2 = () => {
     setShowTable(true);
   };
 
+
   return (
     <Layout>
       <h1>Key Life Domains 2: Rank by Stress</h1>
