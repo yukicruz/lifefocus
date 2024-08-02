@@ -1,5 +1,5 @@
 # lifefocus
-A 14-day course to overcome midlife crisis with personalized exercises to uncover your guiding principles, develop your unique strengths, and create a fulfilling life....
+Short quizzes to uncover your guiding principles, develop your unique strengths, and create a fulfilling life.
 
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
