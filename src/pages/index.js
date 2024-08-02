@@ -126,12 +126,19 @@ const IndexPage = () => {
   ]
 
   return (
+    // <div>
+    //   <Header /> {/* Use the Header component */}
+    //   <div className="main-text">
+    //     <h1>Rediscover your core values,<br />Redefine your life</h1>
+    //     <a href="/assessment" className="assessment-button">Take Our Free Assessment Test</a>
+    //   </div>
     <div>
       <Header /> {/* Use the Header component */}
       <div className="main-text">
         <h1>Rediscover your core values,<br />Redefine your life</h1>
-        <a href="/assessment" className="assessment-button">Take Our Free Assessment Test</a>
+
       </div>
+
       <div className="image-grid">
         {images.map((image, index) => (
           <a href={image.link} key={index} className="image-card">
