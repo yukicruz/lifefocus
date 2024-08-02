@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/lifefocus", // replace with your repository name
+  pathPrefix: "https://yukicruz.github.io/lifefocus/", // replace with your repository name
   siteMetadata: {
     title: `Life Focus`,
     description: `Rediscover your core values, Redefine your life`,
