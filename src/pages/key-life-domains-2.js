@@ -78,6 +78,7 @@ const KeyLifeDomains2 = () => {
 
       {showTable && (
         <>
+          <p>Here are your top 3 stressors. Focus your efforts here.</p>
           <table className="results-table">
             <thead>
               <tr>
