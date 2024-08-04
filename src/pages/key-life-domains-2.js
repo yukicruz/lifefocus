@@ -10,7 +10,7 @@ const KeyLifeDomains2 = () => {
     { id: '3', content: 'Physical Health' },
     { id: '4', content: 'Mental/Emotional' },
     { id: '5', content: 'Spiritual' },
-    { id: '6', content: 'Environment' },
+    { id: '6', content: 'Living Environment' },
     { id: '7', content: 'Career' }
   ]);
 
@@ -48,8 +48,8 @@ const KeyLifeDomains2 = () => {
 
   return (
     <Layout>
-      <h1>Key Life Domains 2: Rank by Stress</h1>
-      <p>These are the 7 life domains. Drag your most stressful ones to the top and your least stressful to the bottom.</p>
+      <h1>What's stressing you out?</h1>
+      <p>Clarity helps you put energy where it matters most. Drag and rank your highest stressors.</p>
 
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="domains">
