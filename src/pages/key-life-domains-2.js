@@ -74,7 +74,6 @@ const KeyLifeDomains2 = () => {
           )}
         </Droppable>
       </DragDropContext>
-      <p>Life can be stressful. Knowing is half the battle.</p>
       <button onClick={handleButtonClick} className="done-button">Rank them!</button>
 
       {showTable && (
@@ -87,7 +86,7 @@ const KeyLifeDomains2 = () => {
               </tr>
             </thead>
             <tbody>
-              {domains.map((domain, index) => (
+              {domains.slice(0, 3).map((domain, index) => ( // Only show top 3 domains
                 <tr key={domain.id}>
                   <td>{index + 1}</td>
                   <td>{domain.content}</td>
